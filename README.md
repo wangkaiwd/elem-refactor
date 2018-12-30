@@ -41,7 +41,7 @@ body {
 ### `rem`进行移动端适配
 `rem` : (font size of the root element)是指相对于根元素(`html`)的字体大小的单位。如果`html`的`font-size`是`16px`,那么`1rem=16px`。
 
-我们可以以`iphone6/7/8`为例，此时屏幕宽度为`375px`,即`document.documentElement.offsetWidth=375`。在现实开发中，我们会使用二倍图，所以设计图中的宽度如果是`80px`，那么在`iphone6/7/8`中应该现实为`40px`。所以为了计算方便,在设计图的基础上除以100来转换为`rem`,代码中应该写`0.8rem`。
+我们可以以`iphone6/7/8`为例，此时屏幕宽度为`375px`,即`document.documentElement.offsetWidth=375`。在现实开发中，我们会使用二倍图，所以设计图中的宽度如果是`80px`，那么在`iphone6/7/8`中应该现实为`40px`。所以为了计算方便,在设计图的基础上除以100来转换为`rem`,代码中应该写`0.8rem`，这样就可以推算出我们应该使用屏幕宽度/7.5。
 
 ```js
 // rem.js
