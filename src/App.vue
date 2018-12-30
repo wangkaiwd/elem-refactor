@@ -8,6 +8,6 @@
 <style lang="less">
 .test-button {
   background-color: @blue;
-  height: 0.4rem;
+  height: 0.8rem;
 }
 </style>

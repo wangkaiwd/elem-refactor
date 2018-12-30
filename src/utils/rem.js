@@ -2,7 +2,7 @@
 const setHtmlFont = () => {
   const htmlWidth = document.documentElement.offsetWidth
   const htmlEle = document.querySelector('html')
-  htmlEle.style.fontSize = `${htmlWidth / 3.75}px`
+  htmlEle.style.fontSize = `${htmlWidth / 7.5}px`
 }
 setHtmlFont()
 window.addEventListener('resize', setHtmlFont)
