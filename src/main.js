@@ -3,7 +3,8 @@ import './cube-ui'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-
+import '@/utils/rem'
+import '@/assets/styles/common.less'
 Vue.config.productionTip = false
 
 new Vue({
