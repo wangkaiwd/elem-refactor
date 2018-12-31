@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <cube-loading v-if="loading"></cube-loading>
+    <cube-loading class="loading" v-if="loading"></cube-loading>
     <template v-if="!loading">
       <div class="header-content">
         <div class="content-left">
@@ -92,6 +92,12 @@ export default {
   height: 2.68rem;
   background-color: @header-bg-color;
   color: #fff;
+  .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   .scale-enter-active {
     animation: scale 0.5s;
   }

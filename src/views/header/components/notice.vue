@@ -1,5 +1,5 @@
 <template>
-  <div class="modal-wrapper" @click="$emit('update:modalVisible', false)">
+  <div class="modal-wrapper">
     <div class="modal">
       <div class="modal-content">
         <div class="content-top">
