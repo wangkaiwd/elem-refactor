@@ -2,17 +2,17 @@ import axios from 'axios'
 import qs from 'qs'
 const DATA_OK = 0
 const axiosInstance = axios.create({
-  baseURL: 'https://some-domain.com/api/',
-  timeout: 1000,
+  baseURL: 'https://easy-mock.com/mock/5b838e2a445175634e4dbe20/element',
+  timeout: 10000,
 })
 
 axiosInstance.interceptors.request.use(
   (config) => {
-    const { method, data, headers } = config
+    const { method, data } = config
     // post请求进行设置
     if (method.toLowerCase() === 'post') {
       data = qs.stringify(data)
-      headers = { 'content-type': 'application/x-www-form-urlencoded' }
+      config.headers = { 'content-type': 'application/x-www-form-urlencoded' }
     }
     return config
   },
@@ -25,9 +25,9 @@ axiosInstance.interceptors.request.use(
 axiosInstance.interceptors.response.use(
   (response) => {
     if (response.status === 200) {
-      if (errno === DATA_OK) {
-        return response.data
-      }
+      // if (errno === DATA_OK) {
+      return response.data
+      // }
     } else {
       console.log('响应状态码不是200')
     }
@@ -37,3 +37,5 @@ axiosInstance.interceptors.response.use(
     return Promise.reject(error)
   }
 )
+
+export default axiosInstance

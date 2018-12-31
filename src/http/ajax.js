@@ -1,9 +1,11 @@
-import axiosInstance from './ajax'
+import axiosInstance from './axiosConfig'
 
 const ajaxFunc = (url, method = 'post') => {
   const params = method === 'post' ? 'params' : 'data'
-  return (data) => axiosInstance({ url, method, [params]: data })
+  return (data = {}) => axiosInstance({ url, method, [params]: data })
 }
+
+export default ajaxFunc
 
 // 请求的可能情况
 //  1. 请求成功： 
