@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
   (config) => {
-    const { method, data } = config
+    let { method, data } = config
     // post请求进行设置
     if (method.toLowerCase() === 'post') {
       data = qs.stringify(data)

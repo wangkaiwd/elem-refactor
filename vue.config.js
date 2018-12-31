@@ -12,6 +12,7 @@ module.exports = {
       .set('http', resolve('src/http'))
       .set('views', resolve('src/views'))
       .set('components', resolve('src/components'))
+      .set('img', resolve('src/assets/img'))
   },
   css: {
     loaderOptions: {
